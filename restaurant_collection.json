@@ -1,5 +1,5 @@
-{
-  "businesses": [
+
+[
     {
       "id": "urban-putt-san-francisco",
       "name": "Urban Putt",
@@ -832,3 +832,6 @@
           "Pier 41",
           "San Francisco, CA 94133"
         ]
+      }
+    }
+]
