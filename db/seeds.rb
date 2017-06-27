@@ -8,3 +8,14 @@ Restaurant.destroy_all
                 :email      => Faker::Internet.email,
                 :password   => 'a' )
 end
+
+json = JSON.parse(File.read('restaurant_collection.json'))
+
+json.each do |restaurant| 
+	@restaurant = Restaurant.new
+	@restaurant[:name] = restaurant['name']
+	@restaurant[:image_url] = restaurant['image_url']
+	@restaurant[:url] = restaurant['url']
+	@restaurant[:phone] = restaurant['phone']
+	@restaurant.save
+end
