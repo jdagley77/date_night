@@ -17,5 +17,7 @@ json.each do |restaurant|
 	@restaurant[:image_url] = restaurant['image_url']
 	@restaurant[:url] = restaurant['url']
 	@restaurant[:phone] = restaurant['phone']
+	@restaurant[:rating] = restaurant['rating']
+	@restaurant[:price] = restaurant['price']
 	@restaurant.save
 end
