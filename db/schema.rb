@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20170627220308) do
     t.string   "image_url"
     t.string   "url"
     t.string   "phone"
+    t.string   "rating"
+    t.string   "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
