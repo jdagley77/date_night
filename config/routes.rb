@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users
 
-  get '/', to: 'restaurants#index'
+  # get '/', to: 'restaurants#index'
+  root to: 'restaurants#index'
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
   get '/login', to: 'sessions#new'
