@@ -1,18 +1,18 @@
-<h2 class="ui center aligned icon header">
+<h2 class="title ui orange center aligned icon header">
   <i class="circular cocktail icon"></i>
   Date Night
 </h2>
 
-<table class="ui table">
-<% @restaurants.each do |restaurant| %>
 
-	 <tbody>
-		<tr>
-			<td class="column"><%= render "restaurant", collection: @restaurants, restaurant: restaurant %> </td>
-		</tr>
-	</tbody>
+<div class="content">
+	<% @restaurants.each do |restaurant| %>
 
-<% end %>
-</table>
+		<div class="restaurant-item">
+			<%= render "restaurant", collection: @restaurants, restaurant: restaurant %> 
+		</div>
+
+	<% end %>
+</div>
+
 
 
