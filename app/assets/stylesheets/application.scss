@@ -15,3 +15,18 @@
  */
 @import "semantic-ui";
 @import "custom.scss";
+
+.content {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.restaurant-item {
+	display: inline-block;
+	padding: 2%;
+}
+
+.title {
+	padding-top: 2%;
+}
