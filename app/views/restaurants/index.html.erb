@@ -1,14 +1,18 @@
-<h1>Date Night</h1>
+<h2 class="ui center aligned icon header">
+  <i class="circular cocktail icon"></i>
+  Date Night
+</h2>
 
+<table class="ui table">
 <% @restaurants.each do |restaurant| %>
-	<ul>
-		<li>
-			<img src="<%= restaurant.image_url %>" width="260" height="190"> <br>	
-			<a href="<% restaurant.url %>"><%= restaurant.name %></a> <br>
-			<a href="tel:<%= restaurant.phone %>"><%= restaurant.phone %></a>
-		</li>
-	</ul>
-<% end %>
 
-<button class: "btn">btn</button>
+	 <tbody>
+		<tr>
+			<td class="column"><%= render "restaurant", collection: @restaurants, restaurant: restaurant %> </td>
+		</tr>
+	</tbody>
+
+<% end %>
+</table>
+
 
