@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   # get '/', to: 'restaurants#index'
   root to: 'restaurants#index'
-  get '/signup' => 'users#new'
-  post '/users' => 'users#create'
-  get '/login', to: 'sessions#new'
+  get    '/signup', to: 'users#new'
+  post   '/users', to: 'users#create'
+  get    '/login', to: 'sessions#new'
+  post   '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
 end
