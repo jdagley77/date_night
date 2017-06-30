@@ -5,9 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
-gem 'bootstrap-sass', '~> 3.2.0'
-gem 'autoprefixer-rails'
+gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
+# gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.4'
