@@ -5,8 +5,10 @@ class CreateRestaurants < ActiveRecord::Migration[5.0]
     	t.string :image_url
     	t.string :url
     	t.string :phone
+    	t.string :rating
+    	t.string :price
 
-      t.timestamps
+    	t.timestamps
     end
   end
 end
