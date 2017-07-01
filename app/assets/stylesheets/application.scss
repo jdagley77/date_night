@@ -16,6 +16,44 @@
 @import "semantic-ui";
 @import "custom.scss";
 
+#nav {
+	color: orange;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0% 2%;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+    padding: 2% 3%;
+    font-size: 1.5em;
+}
+
+li a {
+	color: orange;
+}
+
+li a:hover {
+	color: blue;
+}
+
+#home {
+	float: left;
+	padding: 2% 3%;
+}
+
+#signup a {
+	color: blue;
+}
+
+#signup a:hover {
+	color: orange;
+}
+
 .content {
 	display: flex;
 	flex-flow: row wrap;
@@ -25,8 +63,4 @@
 .restaurant-item {
 	display: inline-block;
 	padding: 2%;
-}
-
-#title {
-	padding-top: 2%;
 }
