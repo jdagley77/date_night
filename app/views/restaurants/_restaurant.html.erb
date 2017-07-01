@@ -10,3 +10,5 @@
 <div class="ui orange button">
 	Add to Top Restaurants
 </div>
+
+<%= button_to "Add to Top Restaurants", user_top_restaurants_path(current_user, restaurant, method: :post), class: "ui small yellow button" %> 
