@@ -1,20 +1,22 @@
 <% provide(:title, "Sign in") %>
 <h1>Sign In</h1>
 
+<%= current_user %>
+
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(login_path) do |f| %>
+    <%= form_tag login_url do %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, placeholder: "Name"%>
+      <%= label_tag :name %>
+      <%= text_field_tag :name %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control', placeholder: "Email" %>
+      <%= label_tag :email %>
+      <%= email_field_tag :email %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control', placeholder: "Password" %>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <%= submit_tag "Login", class: "btn btn-primary" %>
     <% end %>
 
     <center>Not registered yet? <%= link_to "Register", signup_path, class: "link" %></center>
