@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20170627220308) do
   end
 
   create_table "top_restaurants", force: :cascade do |t|
-    t.string   "user_id"
-    t.string   "restaurant_id"
+    t.integer  "user_id"
+    t.integer  "restaurant_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

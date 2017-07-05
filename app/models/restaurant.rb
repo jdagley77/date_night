@@ -1,5 +1,5 @@
 class Restaurant < ApplicationRecord
-	has_many :toprestaurants
-	has_many :users, through: :toprestaurants
+	has_many :top_restaurants
+	has_many :users, through: :top_restaurants
 	
 end
