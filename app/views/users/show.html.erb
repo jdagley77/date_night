@@ -1,5 +1,7 @@
 <h1> Welcome, <%= @user.name %></h1>
 
 <% current_user.restaurants.each do |restaurant| %>
-	<%= restaurant.name %>
+		<div class="restaurant-item">
+			<%= render "restaurants/restaurant", collection: @restaurants, restaurant: restaurant %> 
+		</div>
 <% end %>
