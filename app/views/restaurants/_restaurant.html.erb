@@ -13,7 +13,7 @@
 	</div>
 <% else %>
 	<div class="ui orange button">
-		<%= button_to "Add to Top Restaurants", user_top_restaurants_path(current_user,restaurant, method: :post), class: "ui small yellow button" %>
+		<%= button_to "Add to Top Restaurants", user_top_restaurants_path(current_user, :restaurant_id => restaurant.id, method: :post), class: "ui small yellow button" %>
 	</div>
 <% end %>
  
