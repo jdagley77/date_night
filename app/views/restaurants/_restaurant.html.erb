@@ -7,6 +7,21 @@
 <div class="ui label">
 	Price: <%= restaurant.price %>
 </div> <br>
+<<<<<<< Updated upstream
 <div class="ui orange button">
 	Add to Top Restaurants
 </div>
+=======
+<% if !current_user %>
+	<div class="ui lightgrey button">
+		<%= button_to "Add to Top Restaurants", login_path %>
+	</div>
+<% else %>
+	<% if current_user.restaurants.include?(restaurant) %>
+		<%= button_to "Remove", user_top_restaurants_path(current_user, :restaurant_id => restaurant.id, method: :post), class: "ui small yellow button" %>
+	<% else %>
+		<%= button_to "Add", user_top_restaurants_path(current_user, :restaurant_id => restaurant.id, method: :post), class: "ui small yellow button" %>
+	<% end %>
+<% end %>
+ 
+>>>>>>> Stashed changes
