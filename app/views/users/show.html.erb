@@ -1,6 +1,5 @@
 <h1> Welcome, <%= @user.name %></h1>
 
-<% @toprestaurants.each do |toprestaurant| %>
-	<%= toprestaurant.id %>
-
+<% current_user.restaurants.each do |restaurant| %>
+	<%= restaurant.name %>
 <% end %>
