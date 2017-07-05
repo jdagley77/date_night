@@ -8,6 +8,6 @@
 	Price: <%= restaurant.price %>
 </div> <br>
 <div class="ui orange button">
-	Add to Top Restaurants
+	<%= button_to "Add to Top Restaurants", user_top_restaurants_path(current_user, @restaurant, method: :post), class: "ui small yellow button" %>
 </div>
  
