@@ -16,6 +16,7 @@ class UsersController < ApplicationController
 
   	def show
   		@user = User.find(params[:id])
+  		@toprestaurants = @user.top_restaurants
   	end
 
   	private

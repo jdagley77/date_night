@@ -9,5 +9,4 @@ class TopRestaurantsController < ApplicationController
 	    @toprestaurant = TopRestaurant.create(user_id: params[:user_id], restaurant_id: params[:restaurant_id])
 	    redirect_to root_path
 	end
-	  
 end
