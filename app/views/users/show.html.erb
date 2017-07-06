@@ -1,7 +1,11 @@
-<h1> Welcome, <%= @user.name %></h1>
+<h1 class="header"> Top Restaurants</h1> <br><br>
 
-<% current_user.restaurants.each do |restaurant| %>
-		<div class="restaurant-item">
-			<%= render "restaurants/restaurant", collection: @restaurants, restaurant: restaurant %> 
-		</div>
-<% end %>
+<div class="content">
+
+	<% current_user.restaurants.each do |restaurant| %>
+			<div class="restaurant-item">
+				<%= render "restaurants/restaurant", collection: @restaurants, restaurant: restaurant %> 
+			</div>
+	<% end %>
+
+</div>
