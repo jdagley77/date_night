@@ -13,10 +13,11 @@
 	</div>
 <% else %>
 	<% if current_user.restaurants.include?(restaurant) %>
-		<%= link_to content_tag(:i, '', :class => "fa fa-times"), user_top_restaurants_path(current_user, :restaurant_id => restaurant.id, method: :post), class: "ui small yellow button" %>
+		<%= link_to content_tag(:i, '', :class => "fa fa-times"), user_top_restaurant_path(current_user, restaurant), method: :delete, class: "ui small yellow button" %>
 	<% else %>
-		<%= link_to content_tag(:i, '', :class => "fa fa-heart"), user_top_restaurants_path(current_user, :restaurant_id => restaurant.id, method: :post), class: "ui small yellow button" %>
+		<%= link_to content_tag(:i, '', :class => "fa fa-heart"), user_top_restaurants_path(current_user, :restaurant_id => restaurant.id), method: :post, class: "ui small yellow button" %>
 	<% end %>
 <% end %>
+
 
 

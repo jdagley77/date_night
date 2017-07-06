@@ -11,11 +11,10 @@ class TopRestaurantsController < ApplicationController
 	end
 
 	def destroy
-	    # user = User.find(params[:user_id])
-	    # restaurant = user.restaurants.find(params[:restaurant_id])
-	    # top_restaurant = TopRestaurant.find(user_id: params[:user_id], restaurant_id: params[:restaurant_id])
-	    # user.restaurants.delete(restaurant) if restaurant
-	    # redirect_to root_path
+		@user = User.find(params[:user_id])
+		@restaurant = Restaurant.find(params[:id])
+		TopRestaurant.where(user_id: @user.id, restaurant_id: @restaurant.id).destroy_all
+	    redirect_to root_path
 	end
 end
 
