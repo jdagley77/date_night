@@ -7,7 +7,12 @@ class TopRestaurantsController < ApplicationController
 	def create
 		@restaurant = Restaurant.find(params[:restaurant_id])
 	    @toprestaurant = TopRestaurant.create(user_id: params[:user_id], restaurant_id: params[:restaurant_id])
-	    redirect_to root_path
+	    
+	    if request.xhr?
+        	render partial: 'user', locals:{user: current_user}
+        else
+        	redirect_to root_path
+        end
 	end
 
 	def destroy
