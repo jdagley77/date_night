@@ -1,20 +1,21 @@
 $(document).on('turbolinks:load', function(){
-	updateRestaurant();
+	setTimeout(addRestaurant(), 4000);
+	// addRestaurant();
+	setTimeout(removeRestaurant(), 4000);
+	// removeRestaurant();
 })
 
-var updateRestaurant = function() {
-	$(".add").on("click", function(event){
-		event.preventDefault();
-		event.stopPropagation();
-		var $button = this;
-		var url = `/users/${$(event.target).data('user')}/top_restaurants`
-		// var url = "/users/:user_id/top_restaurants"
-		$.ajax({
-	    method: 'POST',
-	    url: url,
-	  }).done(function(response){
-	    $($button).hide();
-	    console.log(response);
-	  })
-	});
+var addRestaurant = function() {
+
+	$('#heart').on('mouseover', function() {
+		$(this).hide()
+        $('#add-message').show()
+	})
+}
+
+var removeRestaurant = function() {
+	$('.delete').on('mouseover', function() {
+		$(this).hide()
+        $('#remove-message').show()
+	})
 }
