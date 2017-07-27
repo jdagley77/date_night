@@ -13,12 +13,14 @@
 	</div>
 <% else %>
 	<% if current_user.restaurants.include?(restaurant) %>
-		<div data-turbolinks="false">
-			<%= link_to content_tag(:i, '', :class => "fa fa-times"), user_top_restaurant_path(current_user, restaurant), method: :delete, class: "ui small yellow button delete" %>
+		<div>
+			<%= link_to content_tag(:i, '', :class => "fa fa-times"), user_top_restaurant_path(current_user, restaurant), method: :delete, remote: true, class: "ui small yellow button delete", id: "remove" %>
+		<p id="remove-message">Removed</p>
 		</div>
 	<% else %>
-		<div data-turbolinks="false">
-			<%= link_to content_tag(:i, '', :class => "fa fa-heart"), user_top_restaurants_path(current_user, :restaurant_id => restaurant.id), method: :post, class: "ui small yellow button add" %>
+		<div>
+			<%= link_to content_tag(:i, '', :class => "fa fa-heart"), user_top_restaurants_path(current_user, :restaurant_id => restaurant.id), method: :post, remote: true, class: "ui small yellow button add", id: "heart" %>
+			<p id="add-message">Added! </p> 
 		</div>
 	<% end %>
 <% end %>

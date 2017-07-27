@@ -65,3 +65,15 @@ li a:hover {
 	display: inline-block;
 	padding: 2%;
 }
+
+#add-message {
+	display: none;
+	color: green;
+	font-size: 1.5em;
+}
+
+#remove-message {
+	display: none;
+	color: red;
+	font-size: 1.5em;
+}
